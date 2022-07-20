@@ -33,7 +33,7 @@ python experiments.py --MUTUALLY_EXCLUSIVE_SYMBOLS 'true' --TRAIN_SIZE_TRACES '0
 ```
 python experiments.py --MUTUALLY_EXCLUSIVE_SYMBOLS 'true' --TRAIN_SIZE_TRACES '0.4' --TRAIN_ON_RESTRICTED_DATASET 'true' --LOG_DIR 'Results_restricted/' --PLOTS_DIR 'Plots_restricted/'
 ```
-- in the last experiment we test the system on traces with **non mutually exclusive symbols** by using the **complete dataset** settings. You reproduce it with
+- in the last experiment we test the system on traces with **non mutually exclusive symbols** by using the **complete dataset** settings. You reproduce it with:
 ```
 python experiments.py --MUTUALLY_EXCLUSIVE_SYMBOLS 'false' --TRAIN_SIZE_TRACES '0.5' --TRAIN_ON_RESTRICTED_DATASET 'false' --LOG_DIR 'Results_complete_non_mutex/' --PLOTS_DIR 'Plots_complete_non_mutex/'
 ```
