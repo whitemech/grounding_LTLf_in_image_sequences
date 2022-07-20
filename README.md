@@ -1,0 +1,1 @@
+# grounding_LTLf_in_image_sequences
