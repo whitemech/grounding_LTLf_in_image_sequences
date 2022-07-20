@@ -8,7 +8,7 @@ To run the experiments with the MNIST dataset and the DECLARE constraints run th
 
 The file accepts some parameters. You can read the list of parameters by running `python experiments.py --help`.
 
-`experiments.py:
+```experiments.py:
   --LOG_DIR: path to save the results
     (default: 'Results/')
   --MAX_LENGTH_TRACES: maximum traces length used to create the dataset
@@ -23,4 +23,4 @@ The file accepts some parameters. You can read the list of parameters by running
   --TRAIN_SIZE_TRACES: portion of traces used for training
     (default: '0.4')
     (a number)
-`
+```
