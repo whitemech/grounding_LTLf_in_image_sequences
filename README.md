@@ -25,15 +25,15 @@ The file accepts some parameters. You can read the list of parameters by running
     (a number)
 ```
 The paper proposes three experiments:
-- one with the complete dataset: the latter is constructed with all the MNIST training images and 50% of the traces with length in 1-4 steps having mutually exclusive symbols. You can reproduce this experiment by running:
+- one with the **complete dataset**: the latter is constructed with all the MNIST training images and 50% of the traces with length in 1-4 steps having mutually exclusive symbols. You can reproduce this experiment by running:
 ```
 python experiments.py --MUTUALLY_EXCLUSIVE_SYMBOLS 'true' --TRAIN_SIZE_TRACES '0.5' --TRAIN_ON_RESTRICTED_DATASET 'false' --LOG_DIR 'Results_complete/' --PLOTS_DIR 'Plots_complete/'
 ```
-- one with a restricted dataset composed with the MNIST test images and 40% of the traces with length between 1 and 4, having mutually exclusive symbols. You can reproduce this experiment by running:
+- one with a **restricted dataset** composed with the MNIST test images and 40% of the traces with length between 1 and 4, having mutually exclusive symbols. You can reproduce this experiment by running:
 ```
 python experiments.py --MUTUALLY_EXCLUSIVE_SYMBOLS 'true' --TRAIN_SIZE_TRACES '0.4' --TRAIN_ON_RESTRICTED_DATASET 'true' --LOG_DIR 'Results_restricted/' --PLOTS_DIR 'Plots_restricted/'
 ```
-- in the last experiment we test the system on traces with non mutually exclusive symbols by using the complete dataset settings. You reproduce it with
+- in the last experiment we test the system on traces with **non mutually exclusive symbols** by using the **complete dataset** settings. You reproduce it with
 ```
 python experiments.py --MUTUALLY_EXCLUSIVE_SYMBOLS 'false' --TRAIN_SIZE_TRACES '0.5' --TRAIN_ON_RESTRICTED_DATASET 'false' --LOG_DIR 'Results_complete_non_mutex/' --PLOTS_DIR 'Plots_complete_non_mutex/'
 ```
