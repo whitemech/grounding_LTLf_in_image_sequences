@@ -139,7 +139,7 @@ def plot_results(formula, formula_name, res_dir='Results/', num_exp=2, plot_lege
 
 
 def plot_results_all_formulas(formulas, dir='Results/', num_exp=2, plot_legend=False, plot_dir="Plots/"):
-    experiments_to_keep = num_exp
+    experiments_to_keep = 8
     fontsize = 20
     formula_name = "Mean over 20 Declare formulas"
     train_rr_no_ol_cum = []
