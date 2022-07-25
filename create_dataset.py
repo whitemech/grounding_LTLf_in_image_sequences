@@ -176,7 +176,7 @@ def create_complete_set_traces_one_true_literal(max_length_traces, alphabet, dfa
 
     return traces_train, traces_test, traces_t_train, traces_t_test, accepted_train, accepted_test
 
-def create_image_sequence_dataset_non_mut_ex(image_data, numb_of_classes, traces, acceptance):
+def create_image_sequence_dataset_non_mut_ex(image_data, numb_of_classes, traces, acceptance, print_size=False):
     channels = 1
     pixels_h, pixels_v = image_data.data[0].size()
     how_many = []
@@ -224,12 +224,12 @@ def create_image_sequence_dataset_non_mut_ex(image_data, numb_of_classes, traces
             seen_images +=num_img
         if i_i[0] >= how_many[0] or i_i[1] >= how_many[1]:
             break
-
-    #print("Created image dataset with {} sequences: {} train, {} test".format(len(img_seq_train) + len(img_seq_test), len(img_seq_train), len(img_seq_test)))
+    if print_size:
+        print("Created image dataset with {} sequences ".format( len(img_seq_train)))
 
     return img_seq_train, acceptance_train
 
-def create_image_sequence_dataset(image_data, numb_of_classes, traces, acceptance):
+def create_image_sequence_dataset(image_data, numb_of_classes, traces, acceptance, print_size=False):
     channels = 1
     pixels_h, pixels_v = image_data.data[0].size()
     how_many = []
@@ -278,8 +278,8 @@ def create_image_sequence_dataset(image_data, numb_of_classes, traces, acceptanc
             seen_images +=num_img
         if i_i[0] >= how_many[0] or i_i[1] >= how_many[1]:
             break
-
-    #print("Created image dataset with {} sequences: {} train, {} test".format(len(img_seq_train) + len(img_seq_test), len(img_seq_train), len(img_seq_test)))
+    if print_size:
+        print("Created image dataset with {} sequences".format(len(img_seq_train) ))
 
     return img_seq_train, acceptance_train
 #############################################################################################################################################################

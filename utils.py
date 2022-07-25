@@ -38,12 +38,10 @@ def eval_acceptance(classifier, automa, final_states, dfa, alphabet, dataset, au
     test_loss = 0
     classifier.eval()
 
-
     with torch.no_grad():
         for i in range(len(dataset[0])):
             images = dataset[0][i].to(device)
             label = dataset[1][i]
-
             # primo modo usando la lstm o l'automa continuo
             if automa_implementation == 'lstm':
                 accepted = automa(classifier(images))
@@ -89,6 +87,7 @@ def eval_acceptance(classifier, automa, final_states, dfa, alphabet, dataset, au
 
                 output = int(last_state in final_states)
 
+
             else:
                 print("INVALID AUTOMA IMPLEMENTATION: ", automa_implementation)
 
@@ -97,7 +96,8 @@ def eval_acceptance(classifier, automa, final_states, dfa, alphabet, dataset, au
 
             correct += int(output==label)
 
-            test_accuracy = 100. * correct/(float)(total)
+
+        test_accuracy = 100. * correct/(float)(total)
 
     return test_accuracy
 
@@ -116,8 +116,8 @@ def eval_image_classification_from_traces(traces_images, traces_labels, classifi
 
             if  not mutually_exclusive:
 
-                y1 = torch.ones(t_sym.size())
-                y2 = torch.zeros(t_sym.size())
+                y1 = torch.ones(t_sym.size()).to(device)
+                y2 = torch.zeros(t_sym.size()).to(device)
 
                 output_sym = pred_sym.where(pred_sym <= 0.5, y1)
                 output_sym = output_sym.where(pred_sym > 0.5, y2)

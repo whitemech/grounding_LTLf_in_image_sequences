@@ -111,7 +111,6 @@ class LTL_grounding:
         return red_trans_funct
 
     def eval_automa_acceptance(self, automa_implementation):
-
         train_accuracy = eval_acceptance(self.classifier, self.deepAutoma, self.final_states, self.dfa, self.alphabet,(self.train_img_seq, self.train_acceptance_img), automa_implementation, mutually_exc_sym=self.mutually_exclusive)
         test_accuracy_clss= eval_acceptance( self.classifier, self.deepAutoma, self.final_states, self.dfa, self.alphabet,(self.test_img_seq_clss, self.test_acceptance_img_clss), automa_implementation, mutually_exc_sym=self.mutually_exclusive)
         test_accuracy_aut= eval_acceptance( self.classifier, self.deepAutoma, self.final_states, self.dfa, self.alphabet,(self.test_img_seq_aut, self.test_acceptance_img_aut), automa_implementation, mutually_exc_sym=self.mutually_exclusive)
@@ -212,7 +211,7 @@ class LTL_grounding:
         loss_crit = torch.nn.CrossEntropyLoss()
         params = [self.classifier.parameters(), self.deepAutoma.parameters()]
         params = itertools.chain(*params)
-        optimizer = torch.optim.Adam(params=params, lr=0.001) #<--test big dataset fatti con lr=0.001
+        optimizer = torch.optim.Adam(params=params, lr=0.001)
         batch_size = 64
         tot_size = len(self.train_img_seq)
         self.classifier.to(device)

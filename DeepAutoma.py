@@ -62,7 +62,7 @@ class FuzzyAutoma(nn.Module):
 
 class FuzzyAutoma_non_mutex(nn.Module):
     def __init__(self, numb_of_symbols, numb_of_states, reduced_dfa):
-        super(FuzzyAutoma, self).__init__()
+        super(FuzzyAutoma_non_mutex, self).__init__()
         self.dfa = reduced_dfa
         self.numb_of_symbols = numb_of_symbols
         self.numb_of_states = numb_of_states

@@ -82,8 +82,9 @@ def main(argv):
         ##### IMAGE traces dataset
         if FLAGS.MUTUALLY_EXCLUSIVE_SYMBOLS:
             # training dataset
+            print("Training dataset")
             train_img_seq, train_acceptance_img = create_image_sequence_dataset(train_data, 2, train_traces,
-                                                                                          train_acceptance_tr)
+                                                                                          train_acceptance_tr, print_size=True)
             # test clss
             test_img_seq_clss, test_acceptance_img_clss = create_image_sequence_dataset(test_data, 2,
                                                                                                   train_traces,
@@ -93,14 +94,16 @@ def main(argv):
                                                                                                 test_traces,
                                                                                                 test_acceptance_tr)
             # test_hard
+            print("Test dataset")
             test_img_seq_hard, test_acceptance_img_hard = create_image_sequence_dataset(test_data, 2,
                                                                                                   test_traces,
-                                                                                                  test_acceptance_tr)
+                                                                                                  test_acceptance_tr, print_size=True)
 
         else:
             # training dataset
+            print("Training dataset")
             train_img_seq, train_acceptance_img = create_image_sequence_dataset_non_mut_ex(train_data, 2, train_traces,
-                                                                                          train_acceptance_tr)
+                                                                                          train_acceptance_tr,print_size=True)
             # test clss
             test_img_seq_clss, test_acceptance_img_clss = create_image_sequence_dataset_non_mut_ex(test_data, 2,
                                                                                                   train_traces,
@@ -110,9 +113,10 @@ def main(argv):
                                                                                                 test_traces,
                                                                                                 test_acceptance_tr)
             # test_hard
+            print("Test dataset")
             test_img_seq_hard, test_acceptance_img_hard = create_image_sequence_dataset_non_mut_ex(test_data, 2,
                                                                                                   test_traces,
-                                                                                                  test_acceptance_tr)
+                                                                                                  test_acceptance_tr,print_size=True)
 
         image_seq_dataset = (train_img_seq, train_acceptance_img, test_img_seq_clss, test_acceptance_img_clss, test_img_seq_aut, test_acceptance_img_aut, test_img_seq_hard, test_acceptance_img_hard)
 
