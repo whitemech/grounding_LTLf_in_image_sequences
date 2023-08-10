@@ -1,5 +1,5 @@
 # Grounding LTLf specifications in image sequences
-This repository holds the implementation of the paper "Grounding LTLf specifications in images, Elena Umili, Roberto Capobianco and Giuseppe De Giacomo, NeSy 2022"
+This repository holds the implementation of the paper "Grounding LTLf specifications in image sequences, Elena Umili, Roberto Capobianco and Giuseppe De Giacomo, 20th International Conference on Principles of Knowledge Representation and Reasoning (KR2023)"
 ## Requirements
 To install all the dependencies run 
 `pip install -r requirements.txt`
