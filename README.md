@@ -1,5 +1,5 @@
 # Grounding LTLf specifications in image sequences
-This repository holds the implementation of the paper "Grounding LTLf specifications in image sequences, Elena Umili, Roberto Capobianco and Giuseppe De Giacomo, 20th International Conference on Principles of Knowledge Representation and Reasoning (KR2023)"
+This repository holds the implementation of the paper "Grounding LTLf specifications in image sequences, Elena Umili, Roberto Capobianco and Giuseppe De Giacomo, accepted by the 20th International Conference on Principles of Knowledge Representation and Reasoning (KR2023)"
 ## Requirements
 To install all the dependencies run 
 `pip install -r requirements.txt`
@@ -36,4 +36,25 @@ python experiments.py --MUTUALLY_EXCLUSIVE_SYMBOLS=true --TRAIN_SIZE_TRACES '0.4
 - in the last experiment we test the system on traces with **non mutually exclusive symbols** by using the **complete dataset** settings. You reproduce it with:
 ```
 python experiments.py --MUTUALLY_EXCLUSIVE_SYMBOLS=false --TRAIN_SIZE_TRACES '0.5' --TRAIN_ON_RESTRICTED_DATASET=false --LOG_DIR 'Results_complete_non_mutex/' --PLOTS_DIR 'Plots_complete_non_mutex/'
+```
+## How to cite us
+```
+@inproceedings{DBLP:conf/nesy/UmiliCG22,
+  author       = {Elena Umili and
+                  Roberto Capobianco and
+                  Giuseppe De Giacomo},
+  title        = {Grounding LTLf Specifications in Images},
+  booktitle    = {Proceedings of the 16th International Workshop on Neural-Symbolic
+                  Learning and Reasoning as part of the 2nd International Joint Conference
+                  on Learning {\&} Reasoning {(IJCLR} 2022), Cumberland Lodge, Windsor
+                  Great Park, UK, September 28-30, 2022},
+  pages        = {45--63},
+  year         = {2022},
+  crossref     = {DBLP:conf/nesy/2022},
+  url          = {https://ceur-ws.org/Vol-3212/paper4.pdf},
+  timestamp    = {Fri, 10 Mar 2023 16:23:33 +0100},
+  biburl       = {https://dblp.org/rec/conf/nesy/UmiliCG22.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
 ```
