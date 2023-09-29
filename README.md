@@ -39,6 +39,18 @@ python experiments.py --MUTUALLY_EXCLUSIVE_SYMBOLS=false --TRAIN_SIZE_TRACES '0.
 ```
 ## How to cite us
 ```
+@inproceedings{KR2023-65,
+    title     = {{Grounding LTLf Specifications in Image Sequences}},
+    author    = {Umili, Elena and Capobianco, Roberto and De Giacomo, Giuseppe},
+    booktitle = {{Proceedings of the 20th International Conference on Principles of Knowledge Representation and Reasoning}},
+    pages     = {668--678},
+    year      = {2023},
+    month     = {8},
+    doi       = {10.24963/kr.2023/65},
+    url       = {https://doi.org/10.24963/kr.2023/65},
+  }
+```
+```
 @inproceedings{DBLP:conf/nesy/UmiliCG22,
   author       = {Elena Umili and
                   Roberto Capobianco and
